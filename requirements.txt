@@ -13,7 +13,7 @@ einops
 datasets
 loralib
 sentencepiece
-chromadb
+chromadb==0.3.29
 streamlit
 pypdf
 python-docx
