@@ -6,7 +6,6 @@ from langchain.vectorstores import FAISS
 import os
 from dotenv import load_dotenv
 
-embedding_model_name = os.environ.get('EMBEDDING_MODEL_NAME')
 
 ####
 from langchain.document_loaders import PyPDFLoader
@@ -32,7 +31,7 @@ from htmlTemplates import css, bot_template, user_template
 
 embedding_model_name = os.environ.get('EMBEDDING_MODEL_NAME')
 llama_7b_chat_model_name = os.environ.get('LLAMA_7B_CHAT_MODEL_NAME')
-hftoken = os.environ.get('HUGGINGFACEHUB_API_TOKEN')
+hftoken = st.secrets['HUGGINGFACEHUB_API_TOKEN']
 
 
 
@@ -186,7 +185,7 @@ def main():
         st.markdown('''
         - [Streamlit](https://streamlit.io/)
         - [LangChain](https://python.langchain.com/)
-        - [HuggingFace](https://platform.openai.com/docs/models) LLM Model
+        - [Model](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf) meta-llama/Llama-2-7b-chat-hf
         ''')
         st.write('App developed using Streamlit cloud and different models using Huggingface')
 
